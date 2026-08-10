@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-05-06 03:01:49",
+  "runtime_s": 864.92,
+  "output_xlsx": "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\00_结果数据\\正式完整轨迹结果\\整条避险轨迹八模型累计预测正式结果.xlsx",
+  "figure_dir": "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图",
+  "figures": [
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_ADE.png",
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_FDE.png",
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_RMSE.png",
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_终点误差分布.png",
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_误差随预测时间变化.png",
+    "C:\\Users\\Administrator\\Desktop\\毕业论文修改输出\\01_图表\\01_整条轨迹指标图\\Figure_full_trajectory_真实轨迹与八模型预测对比.png"
+  ],
+  "protocol": [
+    {
+      "item": "formal_protocol",
+      "value": "open-loop cumulative prediction: each model receives only the first 3s observed history, then the next input window is updated with its own predictions until the strict avoidance endpoint."
+    },
+    {
+      "item": "validation_population",
+      "value": "470 hold-out 0409 samples consistent with the HGB-ECR fixed-3s validation set."
+    },
+    {
+      "item": "evaluation_times",
+      "value": "Errors are computed every 0.5s after the input window and additionally at the strict avoidance endpoint; endpoint is the earlier of stabilized lane/deceleration completion and 10s total trajectory duration."
+    },
+    {
+      "item": "not_formal",
+      "value": "Observed-update rolling metrics are not used here because they refresh the model with later true observations and therefore are not pure full-trajectory prediction metrics."
+    }
+  ],
+  "summary": [
+    {
+      "model_id": "HGB-ECR",
+      "model_label": "HGB-ECR",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 3.854123267880491,
+      "FDE_m": 5.932574525434153,
+      "RMSE_m": 5.863328784807975,
+      "FDE_median_m": 4.462453108984363,
+      "FDE_q90_m": 12.52170363874595
+    },
+    {
+      "model_id": "Kalman-CV",
+      "model_label": "Kalman-CV",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 6.96500804006649,
+      "FDE_m": 10.800093434164882,
+      "RMSE_m": 10.28512772679049,
+      "FDE_median_m": 7.824402963299024,
+      "FDE_q90_m": 25.564141056499277
+    },
+    {
+      "model_id": "GBR",
+      "model_label": "GBR一步递推",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 7.738241316794337,
+      "FDE_m": 9.86516645099378,
+      "RMSE_m": 10.408646178691574,
+      "FDE_median_m": 6.589311281104232,
+      "FDE_q90_m": 22.575730898079346
+    },
+    {
+      "model_id": "IDM",
+      "model_label": "IDM避险状态机",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 7.875201301539278,
+      "FDE_m": 11.501306781930417,
+      "RMSE_m": 10.58500538050373,
+      "FDE_median_m": 9.847322291140415,
+      "FDE_q90_m": 21.787425398872315
+    },
+    {
+      "model_id": "CNN",
+      "model_label": "CNN一维卷积",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 8.25044909386665,
+      "FDE_m": 11.53612421752546,
+      "RMSE_m": 10.727591749714342,
+      "FDE_median_m": 9.12473007603823,
+      "FDE_q90_m": 24.280314375374367
+    },
+    {
+      "model_id": "Helly",
+      "model_label": "Helly线性跟驰",
+      "N": 470,
+      "point_count": 5295,
+      "ADE_m": 11.175137711392646,
+      "FDE_m": 17.82989558142604,
+      "RMSE_m": 15.175707671753859,
+      "FDE_median_m": 16.777276221207988,
+      "FDE_q90_m": 32.60180227659075
+    }
+  ],
+  "training_stats": {
+    "GBR": {
+      "delta_x_m": 0.005942473188042641,
+      "delta_y_m": 0.03326353803277016,
+      "delta_distance_m": 0.03361670672893524,
+      "delta_speed_mps": 0.013609771616756916
+    },
+    "CNN": {
+      "delta_x_m": 0.01303092110902071,
+      "delta_y_m": 0.09525994956493378,
+      "delta_distance_m": 0.09524522721767426,
+      "delta_speed_mps": 0.027514494955539703
+    },
+    "Helly": {
+      "ks": 0.018827641947398707,
+      "kv": 0.17960247454146067,
+      "s0": 19.99999999979338,
+      "T": 2.9999999996272937
+    }
+  }
+}
