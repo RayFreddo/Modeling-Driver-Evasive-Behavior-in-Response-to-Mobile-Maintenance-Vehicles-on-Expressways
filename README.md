@@ -38,9 +38,9 @@ code and reported results in this repository:
 | File | Availability | Notes |
 | --- | --- | --- |
 | `data_0403.xlsx` | Included | Analysis-ready dataset. |
-| `data_0407.xlsx` | Pending Git LFS upload | Analysis-ready dataset; it is not available in this commit. |
-| `data_0409.xlsx` | Included | Analysis-ready dataset. |
-| `data_0410.xlsx` | Included | Analysis-ready dataset. |
+| `data_0407.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
+| `data_0409.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
+| `data_0410.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
 | `data_0416.xlsx` | Included | Analysis-ready dataset. |
 
 The raw source data are **not** deposited in this public repository. In
@@ -60,11 +60,14 @@ subject to the applicable consent, privacy, and data-use requirements.
 
 ### Cloning the repository
 
-Because `data_0407.xlsx` exceeds GitHub's ordinary file-size limit, it must be
-stored with Git LFS. Once it has been uploaded, install Git LFS before cloning,
-or run the following in an existing clone before using that file:
+### Complete data archive
+
+All five processed datasets are also distributed as a split ZIP archive in
+`Data/`. Download every `processed_data.z01` through `processed_data.z13` file
+and `processed_data.zip` into the same directory. Standard ZIP utilities can
+then extract the final `processed_data.zip` file and will automatically read
+the preceding parts:
 
 ```bash
-git lfs install
-git lfs pull
+unzip processed_data.zip
 ```
