@@ -1,0 +1,42 @@
+[
+  {
+    "file": "overall_prediction_errors.csv",
+    "source": "五折独立实验_20261012/HGB-ECR_现行交付_20261014/最终总体比较.csv",
+    "sha256": "41ba60c6578fb7a21a1a307287cd41898687bc6d51aaa6be921a885bc07bc74c"
+  },
+  {
+    "file": "heldout_date_errors.csv",
+    "source": "五折独立实验_20261012/HGB-ECR_现行交付_20261014/最终五折验证.csv",
+    "sha256": "a1e1c1c2a28d2cba418bace5b8b134d866186ac5d5c5ea5df5abcee40a6109c4"
+  },
+  {
+    "file": "scoring_coverage.csv",
+    "source": "五折独立实验_20261012/HGB-ECR_现行交付_20261014/计分覆盖与换道完成.csv",
+    "sha256": "13067f73f3639bbd8ce56ed7f42f6bd32b7b373493cb4c67ccc63bee7ccd89b0"
+  },
+  {
+    "file": "component_ablation.csv",
+    "source": "outputs/F阶段_20261015/ablation/overall.csv",
+    "sha256": "0fbea50c060077a3b7cc16cd9c8858d13a0fd688f037375586cbef2561eee5c1"
+  },
+  {
+    "file": "endpoint_feature_shap.csv",
+    "source": "outputs/F阶段_20261015/explanation/overall.csv",
+    "sha256": "4e325a1f4db70ab105c2e06ba4499f5e8f6b2d36c0df1c0fe63c24d6a124060a"
+  },
+  {
+    "file": "horizon_errors.csv",
+    "source": "outputs/E阶段_20261015/horizon_curves.csv",
+    "sha256": "1e267a2d78eacd852d2ad750627893e3988f2157f9d5a78108ce75b95209855e"
+  },
+  {
+    "file": "confidence_intervals.csv",
+    "source": "outputs/E阶段_20261015/confidence_intervals.csv",
+    "sha256": "1142781d8a2d3d2f15555fd74b8a4b56588f995e650ee89c68db8294e7b16742"
+  },
+  {
+    "file": "endpoint_axis_errors.csv",
+    "source": "outputs/E阶段_20261015/direction.csv",
+    "sha256": "2484c0b08e12b955efab1201cf22d3d53925fd4a810b21bbf8a13ca3bd3ce919"
+  }
+]

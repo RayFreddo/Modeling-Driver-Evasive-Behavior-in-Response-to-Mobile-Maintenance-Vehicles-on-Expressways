@@ -1,0 +1,451 @@
+{
+  "format": "byte-exact multipart XLSX",
+  "chunk_bytes": 25165824,
+  "files": [
+    {
+      "original_name": "data_0403.xlsx",
+      "upload_stem": "data_0403.xlsx",
+      "size_bytes": 124221324,
+      "sha256": "aee8746fc0a57764e354173419461cf75a894d581924b96e97942233e92b9b5a",
+      "parts": [
+        {
+          "name": "data_0403.xlsx.part001",
+          "size_bytes": 25165824,
+          "sha256": "3709ee0e4f04fda9c692473b9d89c43d153d0887ba86e31fde80f285ff124c08"
+        },
+        {
+          "name": "data_0403.xlsx.part002",
+          "size_bytes": 25165824,
+          "sha256": "463fd5f85b223513919ca72f11f556eb585cd02e11160abf0ae7a3910784e473"
+        },
+        {
+          "name": "data_0403.xlsx.part003",
+          "size_bytes": 25165824,
+          "sha256": "e49dc17bdb359b5e3fbf68ed58e9378ac2e6ac285be2134918d94e9457fa454e"
+        },
+        {
+          "name": "data_0403.xlsx.part004",
+          "size_bytes": 25165824,
+          "sha256": "11b32e22d75786807d0af79f3e45170f36ab76bf5123ddd5823c4083f6df30fd"
+        },
+        {
+          "name": "data_0403.xlsx.part005",
+          "size_bytes": 23558028,
+          "sha256": "f2042603087b30e0a944c2a9533fe2f82e51aac53ab59169d3a31e6a40e19c41"
+        }
+      ]
+    },
+    {
+      "original_name": "data_0407.xlsx",
+      "upload_stem": "data_0407.xlsx",
+      "size_bytes": 654704458,
+      "sha256": "a4bc600a5ddaac4385edba45694df2c40ef5f250fb29072d113007a61cb804c1",
+      "parts": [
+        {
+          "name": "data_0407.xlsx.part001",
+          "size_bytes": 25165824,
+          "sha256": "d872e0e5599d4a2af80069fa51e68b9c177474772f52276c93f487a651bca553"
+        },
+        {
+          "name": "data_0407.xlsx.part002",
+          "size_bytes": 25165824,
+          "sha256": "4ceee05ce33a7c60a5d94d6f1a65ee4c0b34ce24a5a0ddae1a764ae5939e6536"
+        },
+        {
+          "name": "data_0407.xlsx.part003",
+          "size_bytes": 25165824,
+          "sha256": "af18e7f393c04f1dd8630300720028113741a88174466343add9555eefe4c212"
+        },
+        {
+          "name": "data_0407.xlsx.part004",
+          "size_bytes": 25165824,
+          "sha256": "07a0a71a1280330f7094fa1fede24735fa326cecd8acc667d5172c89491bb89c"
+        },
+        {
+          "name": "data_0407.xlsx.part005",
+          "size_bytes": 25165824,
+          "sha256": "ab541731424aeb97a25896758cbccef72549f42aec3e959aabc68049fed67bf6"
+        },
+        {
+          "name": "data_0407.xlsx.part006",
+          "size_bytes": 25165824,
+          "sha256": "1782265d665a9d8bd16fe1722d5e6ed1fbb13808f9bfb3bc5a125355b8f1a216"
+        },
+        {
+          "name": "data_0407.xlsx.part007",
+          "size_bytes": 25165824,
+          "sha256": "fc87ec288bf8908f2370b584878b177a3f84f4838341ac5c1398fb15af16a69e"
+        },
+        {
+          "name": "data_0407.xlsx.part008",
+          "size_bytes": 25165824,
+          "sha256": "67482b28e2a04eeb7a013cba2d43c7ac9eb3635249c74bde8d34cf889537b6b7"
+        },
+        {
+          "name": "data_0407.xlsx.part009",
+          "size_bytes": 25165824,
+          "sha256": "478e86f2186b3e003bef688e3b9bb5a1f5bcb4bfbfaa7bed1c0bb92f87129b52"
+        },
+        {
+          "name": "data_0407.xlsx.part010",
+          "size_bytes": 25165824,
+          "sha256": "4fe886663c51aa894839478b0ab1951047f157245081788605bded618f9701ab"
+        },
+        {
+          "name": "data_0407.xlsx.part011",
+          "size_bytes": 25165824,
+          "sha256": "501ca0e6c0f985fcd1f7ec4df3515e96a5051eb3a16142c382fe5a87db50fc2e"
+        },
+        {
+          "name": "data_0407.xlsx.part012",
+          "size_bytes": 25165824,
+          "sha256": "4b96c67f50b0d22128a0042c1e8312fd3fef0915acb688256a97641139ce1e76"
+        },
+        {
+          "name": "data_0407.xlsx.part013",
+          "size_bytes": 25165824,
+          "sha256": "cfaa07b15096e50c726a9c9b535991aac561ecb4d9b38134cbbc7c7a762ccd81"
+        },
+        {
+          "name": "data_0407.xlsx.part014",
+          "size_bytes": 25165824,
+          "sha256": "a68442c15f3574a817ff662f14896f9a3c9366d9665cff5ced7a9d907440daad"
+        },
+        {
+          "name": "data_0407.xlsx.part015",
+          "size_bytes": 25165824,
+          "sha256": "efeb224081e2a31d255a659b4b43817727fb10d67ddaf72e9b86cfe86c175ca1"
+        },
+        {
+          "name": "data_0407.xlsx.part016",
+          "size_bytes": 25165824,
+          "sha256": "d7700518cd61427a5b00ca2a9bcd56742873bd71d4f7d697843d08179d40865f"
+        },
+        {
+          "name": "data_0407.xlsx.part017",
+          "size_bytes": 25165824,
+          "sha256": "9bf1843c55eb254d148a77c7d2f85caa409f8be31d1ecec975344ee9c0f040f5"
+        },
+        {
+          "name": "data_0407.xlsx.part018",
+          "size_bytes": 25165824,
+          "sha256": "d55058f2e71b277978ae2d52501fc152fad09854f891e805b4a6421a2d611812"
+        },
+        {
+          "name": "data_0407.xlsx.part019",
+          "size_bytes": 25165824,
+          "sha256": "c91241c7c8f0c254315b392f5b55deb2c4dd0c8a8f54fb524c5d8d326371ad08"
+        },
+        {
+          "name": "data_0407.xlsx.part020",
+          "size_bytes": 25165824,
+          "sha256": "8b03e53b16cef9301dc963b5fa9fb581cb5b4ab1b4aca37c4f91282b8e77794a"
+        },
+        {
+          "name": "data_0407.xlsx.part021",
+          "size_bytes": 25165824,
+          "sha256": "ab8c2aebfb32b08f7a4fc950a3ec25332e030fab2823f997fdbe9208fb8e98d0"
+        },
+        {
+          "name": "data_0407.xlsx.part022",
+          "size_bytes": 25165824,
+          "sha256": "1dbf6350c5a66be0a053ae65685db1814bfb54efe67485e59dc0470d9ac0e37d"
+        },
+        {
+          "name": "data_0407.xlsx.part023",
+          "size_bytes": 25165824,
+          "sha256": "d868a6756c7f29a8a029833430a8a70769aa6fc68fa5398142a5319a9e8eccc8"
+        },
+        {
+          "name": "data_0407.xlsx.part024",
+          "size_bytes": 25165824,
+          "sha256": "ee948bb313f8f8c87b766aa831ce0ed2bf3166ad54197ee60a2e807b40b21df4"
+        },
+        {
+          "name": "data_0407.xlsx.part025",
+          "size_bytes": 25165824,
+          "sha256": "a50d0edca842448f1f3b9d413510316ebe9b28c0667062ebec362c025f57a0c2"
+        },
+        {
+          "name": "data_0407.xlsx.part026",
+          "size_bytes": 25165824,
+          "sha256": "2469763d763445e58960d26aa54845038be4cf0b01ef0d401f0c5aa54d386e3c"
+        },
+        {
+          "name": "data_0407.xlsx.part027",
+          "size_bytes": 393034,
+          "sha256": "ea16316587c898af214bb3ff8624e6c35f6626a72003ed7afdaab8657789fe87"
+        }
+      ]
+    },
+    {
+      "original_name": "data_0409.xlsx",
+      "upload_stem": "data_0409.xlsx",
+      "size_bytes": 556762954,
+      "sha256": "6095c4d80d24919b149b284974815872742ec53b771e9361d9d8f5000cb02f29",
+      "parts": [
+        {
+          "name": "data_0409.xlsx.part001",
+          "size_bytes": 25165824,
+          "sha256": "35480f8172910b5d02487b4adc6afb3124acc37291213f5116265eaeee3e8371"
+        },
+        {
+          "name": "data_0409.xlsx.part002",
+          "size_bytes": 25165824,
+          "sha256": "93c6a13df8f546c4be6329bf90e41f3938a61457d1603f65e4684bc44e1191f2"
+        },
+        {
+          "name": "data_0409.xlsx.part003",
+          "size_bytes": 25165824,
+          "sha256": "62d7f68d9591193b994bfd77d4a288cdde17d5629bf58c783c648cf2c25e27e5"
+        },
+        {
+          "name": "data_0409.xlsx.part004",
+          "size_bytes": 25165824,
+          "sha256": "792aea2db327c7a85456100c663168abcbac444568cc9699b571ba09982c9068"
+        },
+        {
+          "name": "data_0409.xlsx.part005",
+          "size_bytes": 25165824,
+          "sha256": "a43ca53d7ba3804c73e5f53239552c3b3a80b2bea8bfd14d827565293b29e9b2"
+        },
+        {
+          "name": "data_0409.xlsx.part006",
+          "size_bytes": 25165824,
+          "sha256": "b9b63b587b6094355ed775c040967f27ef1cda817d6669cae19ee7e18baa0bee"
+        },
+        {
+          "name": "data_0409.xlsx.part007",
+          "size_bytes": 25165824,
+          "sha256": "1d3e8e5a877119fd329efc1045644a81a6de169f1963d2e92a95185632effcde"
+        },
+        {
+          "name": "data_0409.xlsx.part008",
+          "size_bytes": 25165824,
+          "sha256": "3b00bf9d0844c79efc249c113c76d6017ce9540f38497cdfff9c4eebed8a8bd5"
+        },
+        {
+          "name": "data_0409.xlsx.part009",
+          "size_bytes": 25165824,
+          "sha256": "b496cba91ed25a6d40e95159e6089d6d6c3923de2e5566d2210cfa8f4ea5ba83"
+        },
+        {
+          "name": "data_0409.xlsx.part010",
+          "size_bytes": 25165824,
+          "sha256": "8247a76f5dcc76d426be12611b08bab747a44ae4a40114908430ee88692ec2b7"
+        },
+        {
+          "name": "data_0409.xlsx.part011",
+          "size_bytes": 25165824,
+          "sha256": "22832a64c3d46d1195c1636c66341555ad01b3c421359597700f6793e474ff7f"
+        },
+        {
+          "name": "data_0409.xlsx.part012",
+          "size_bytes": 25165824,
+          "sha256": "30cf1db954fc4328b67cb104e37458209cf929966da6e2c7f882e01f12699b9b"
+        },
+        {
+          "name": "data_0409.xlsx.part013",
+          "size_bytes": 25165824,
+          "sha256": "ddcd455282b3e214061041eb14104639c7f1ec5e4968c6c7544bea361d7ca8bd"
+        },
+        {
+          "name": "data_0409.xlsx.part014",
+          "size_bytes": 25165824,
+          "sha256": "42efd9e7bf1b2d7c13207ab1e91d3275bd1b447310c3ca71092169cb04077a43"
+        },
+        {
+          "name": "data_0409.xlsx.part015",
+          "size_bytes": 25165824,
+          "sha256": "2347e114a9a3722331431f579f3e5f971f3f5f7a06db55b702d919a165a0ba8c"
+        },
+        {
+          "name": "data_0409.xlsx.part016",
+          "size_bytes": 25165824,
+          "sha256": "b83842b325ad69793bd472ca770944c6ddd9d33880994972c658314b302c572e"
+        },
+        {
+          "name": "data_0409.xlsx.part017",
+          "size_bytes": 25165824,
+          "sha256": "8a540ed1b68e8d997a7519143b1f8909549df0d8ed5229f91a48306730ec574f"
+        },
+        {
+          "name": "data_0409.xlsx.part018",
+          "size_bytes": 25165824,
+          "sha256": "314c461a84344960e975d9aa895de6717f5371ab17a66ab95b060029f88ebedb"
+        },
+        {
+          "name": "data_0409.xlsx.part019",
+          "size_bytes": 25165824,
+          "sha256": "d3d3110f6593b665791b942c8eab6cbd16eb1c5746cde4d3bc85b303edc3102f"
+        },
+        {
+          "name": "data_0409.xlsx.part020",
+          "size_bytes": 25165824,
+          "sha256": "90d3f6c9565277719e8e5891d33a5ce0ee03e9fff76c8fe0e9c25817ff1da2ab"
+        },
+        {
+          "name": "data_0409.xlsx.part021",
+          "size_bytes": 25165824,
+          "sha256": "d9ec79c61004c76ca6f99a8eeed3eb73c5f5d43393a723cbf0e8ab4a5c239bf2"
+        },
+        {
+          "name": "data_0409.xlsx.part022",
+          "size_bytes": 25165824,
+          "sha256": "57b7c0f8b37f72c77fe104bf2a3e0f3a3df89341ebe4ba6a1497b1da1a48fbef"
+        },
+        {
+          "name": "data_0409.xlsx.part023",
+          "size_bytes": 3114826,
+          "sha256": "91d0e583c679a3d44b5bd3842668908f42d521f329c5fc9b0f7abefdb88f7912"
+        }
+      ]
+    },
+    {
+      "original_name": "data_0410.xlsx",
+      "upload_stem": "data_0410.xlsx",
+      "size_bytes": 545361834,
+      "sha256": "5257caa563f087ef4dd62413925419010b59a7588bba9b57e6c4db1c38e550f4",
+      "parts": [
+        {
+          "name": "data_0410.xlsx.part001",
+          "size_bytes": 25165824,
+          "sha256": "79227e3a0c988d51d2f783752c56d5d2a7d3e5bd6abb67086e58b37c26877c60"
+        },
+        {
+          "name": "data_0410.xlsx.part002",
+          "size_bytes": 25165824,
+          "sha256": "5067902c31b84ae1fd0b59d45d81c52218882cb1696b581a5321c4563d658335"
+        },
+        {
+          "name": "data_0410.xlsx.part003",
+          "size_bytes": 25165824,
+          "sha256": "b367c5f255138b1ecf38bae40d9394f4fd38b4ef6f1b4a561abf6fa471291bf6"
+        },
+        {
+          "name": "data_0410.xlsx.part004",
+          "size_bytes": 25165824,
+          "sha256": "feb4b8b37c420787b1825fadf8aa4a45440aed4c2b2fdca423e5a7b8757a9087"
+        },
+        {
+          "name": "data_0410.xlsx.part005",
+          "size_bytes": 25165824,
+          "sha256": "86bd6be1f62e12f8f741a66f4dbce0cc6a0f49e486d6f53406bb951ac22a3ab2"
+        },
+        {
+          "name": "data_0410.xlsx.part006",
+          "size_bytes": 25165824,
+          "sha256": "ddc628f78ec16005c7267cea4e89aedc562c8004a6b708c6be9ebb3025eb4949"
+        },
+        {
+          "name": "data_0410.xlsx.part007",
+          "size_bytes": 25165824,
+          "sha256": "9dfcbddd94ff688697a0d46ea528d1872861b8d37c0e5a085a72653a1f31c1a9"
+        },
+        {
+          "name": "data_0410.xlsx.part008",
+          "size_bytes": 25165824,
+          "sha256": "1817232747b1cd951ba09ac6edd2d6727f1f59ca6f15cdefa1443f36928efebc"
+        },
+        {
+          "name": "data_0410.xlsx.part009",
+          "size_bytes": 25165824,
+          "sha256": "734c2df4b8a98db5bc756fb067eed17bbc36f2f9d0982554e3c71e29feb1ac61"
+        },
+        {
+          "name": "data_0410.xlsx.part010",
+          "size_bytes": 25165824,
+          "sha256": "76cef5e74dbc0150111c145319c805b314f0ee4210861857fec30a53c14adf90"
+        },
+        {
+          "name": "data_0410.xlsx.part011",
+          "size_bytes": 25165824,
+          "sha256": "e6b96b8b2f99d67bbc9b8123258276648779c973c673dc440ccc2c03970cf968"
+        },
+        {
+          "name": "data_0410.xlsx.part012",
+          "size_bytes": 25165824,
+          "sha256": "921547da0bc45503cc4b3d1f3d9b5bee8dcfad76a888f9a177f65445b5e77191"
+        },
+        {
+          "name": "data_0410.xlsx.part013",
+          "size_bytes": 25165824,
+          "sha256": "ec8236d66479d49ac5acc0263b935998b85794801f205a0d234b3e85afec3cad"
+        },
+        {
+          "name": "data_0410.xlsx.part014",
+          "size_bytes": 25165824,
+          "sha256": "77720e4f97724960d7c18fd91af2f957cb1e4b4e13a8234724bb8c5eacb22ff9"
+        },
+        {
+          "name": "data_0410.xlsx.part015",
+          "size_bytes": 25165824,
+          "sha256": "63dbf1eda053a00e531975b5f650950d9ece95fc503484f401fb6a72c1c9fb4a"
+        },
+        {
+          "name": "data_0410.xlsx.part016",
+          "size_bytes": 25165824,
+          "sha256": "c576cf12deb33de9f9f2726a33c470146ca0b607c75a6c1bf9d78e4736d34ebb"
+        },
+        {
+          "name": "data_0410.xlsx.part017",
+          "size_bytes": 25165824,
+          "sha256": "09d4ecc9f596653bafdaefa100f353b366b7d397b5b1294dfe310ce84ed487a3"
+        },
+        {
+          "name": "data_0410.xlsx.part018",
+          "size_bytes": 25165824,
+          "sha256": "a17807855e73a9846417a17afe9fa50485dab926964b652761c8c8eb8ef3717e"
+        },
+        {
+          "name": "data_0410.xlsx.part019",
+          "size_bytes": 25165824,
+          "sha256": "5ebf8d89fdc4b39adda36183529a753ef08dd6ab12b688bd83195e9e818c9ef6"
+        },
+        {
+          "name": "data_0410.xlsx.part020",
+          "size_bytes": 25165824,
+          "sha256": "f0ebaa4d27061874c0450ef3b9028da0e36b970dc2b1b19bb484d039a345632a"
+        },
+        {
+          "name": "data_0410.xlsx.part021",
+          "size_bytes": 25165824,
+          "sha256": "9b06bf404eeb2ce82b9193c2edcf94842b641ac30a19e0dc7074252d62b05bf9"
+        },
+        {
+          "name": "data_0410.xlsx.part022",
+          "size_bytes": 16879530,
+          "sha256": "d4cbe27865295ed230e3bdd181bfbb58f50ab9d98969a4cdd95e6c110f6f50a3"
+        }
+      ]
+    },
+    {
+      "original_name": "data_0416.xlsx",
+      "upload_stem": "data_0416.xlsx",
+      "size_bytes": 87983165,
+      "sha256": "ed8d69c72ca4392162f3cd6ed17d80ba673cb65318f30062a551b673168337dd",
+      "parts": [
+        {
+          "name": "data_0416.xlsx.part001",
+          "size_bytes": 25165824,
+          "sha256": "c6507f07495fe879b055e6d03738d370fe0b230eb510e76d558bcc21899bff4d"
+        },
+        {
+          "name": "data_0416.xlsx.part002",
+          "size_bytes": 25165824,
+          "sha256": "b5edd1533376fcd5c6594fa6652045ef6012f2591f5ebfde7aab170846cede10"
+        },
+        {
+          "name": "data_0416.xlsx.part003",
+          "size_bytes": 25165824,
+          "sha256": "f74bdf94fa83ffb80e44c21423f0ed0a6815d4cb0ce43f44a7ff29445d0efa2f"
+        },
+        {
+          "name": "data_0416.xlsx.part004",
+          "size_bytes": 12485693,
+          "sha256": "64c3c11a6305994bdf14d796e0c17f058299e382a69764b4e80977b28af3ce2f"
+        }
+      ]
+    }
+  ]
+}

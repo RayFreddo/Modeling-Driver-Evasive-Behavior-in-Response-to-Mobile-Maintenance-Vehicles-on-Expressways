@@ -1,0 +1,117 @@
+[
+  {
+    "file": "model/predict.py",
+    "source": "Code/HGB_ECR_现行_20261014/predict.py",
+    "sha256": "328d80618da05fb1405ec2746a21d076ea033148af7e0e0016cf57ab57670e82"
+  },
+  {
+    "file": "model/train_head.py",
+    "source": "Code/HGB_ECR_现行_20261014/train_head.py",
+    "sha256": "010b6fb782c4001c11676acf6180542bfb06cf69ef43f05c7781566605b2ed53"
+  },
+  {
+    "file": "model/select_parameters.py",
+    "source": "Code/HGB_ECR_现行_20261014/select_parameters.py",
+    "sha256": "5189bb0376a52077cfbf71e24a39c1cedeb34dbb1478ea90c77b353688aec201"
+  },
+  {
+    "file": "model/_locations.py",
+    "source": "Code/HGB_ECR_现行_20261014/_locations.py",
+    "sha256": "3a0fbd67276324672f37335540b8f17d029f190e95fd106addce9dc42235090b"
+  },
+  {
+    "file": "model/longhead.py",
+    "source": "Code/revision_step4_longhead_20261014_run11/longhead.py",
+    "sha256": "9ae3a911be1144c9e78a52afe09d7250ab694d6ae264dcb647443357f5b97365"
+  },
+  {
+    "file": "model/rms_selection.py",
+    "source": "Code/revision_step4_matched_teacher_20261014_run13/rms_selection.py",
+    "sha256": "46733dc2983c4eae9e9fc1a35ff584207603acced247098d20fbcf4d46b6eaec"
+  },
+  {
+    "file": "core/contracts.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/contracts.py",
+    "sha256": "5cf9a679773c1aa8caf886759c7a1510dea343ac01e038ea906e0994b80c8981"
+  },
+  {
+    "file": "core/full_dataset.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/full_dataset.py",
+    "sha256": "ea64369cddf89f5d3332c8be988769b46ff96dbb53f76af9d60a973729e6274b"
+  },
+  {
+    "file": "core/prepare_optimized.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/prepare_optimized.py",
+    "sha256": "f8afb68d6a184939d2164470070beeec9e7386038236c1a33bc50b79f66e57d7"
+  },
+  {
+    "file": "core/optimized_features_base.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_features_base.py",
+    "sha256": "d98331868677c267d8100e4577a99a6d634c5ade3d781036298b896d9ea09898"
+  },
+  {
+    "file": "core/optimized_features.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_features.py",
+    "sha256": "900cf599700d216044157ee52e140e825e401ac82902f56e9a39454807dec933"
+  },
+  {
+    "file": "core/optimized_models.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_models.py",
+    "sha256": "e61eef4441a0cb62361715ce915f4c09b0a78fac2d95064e3e9d15c9dc5eb9ad"
+  },
+  {
+    "file": "core/optimized_fit.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_fit.py",
+    "sha256": "66a891e0fc7944b46ccb42bd56eb775fe5731bb4999c5bde4c1d187482681efd"
+  },
+  {
+    "file": "core/optimized_physical.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_physical.py",
+    "sha256": "156cb7e2b046aab30dec7fdf7bd4d19e5d30c8301dcd7707c410ddd2e29a2590"
+  },
+  {
+    "file": "core/physical_core.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/physical_core.py",
+    "sha256": "43dff09b98dd644795d1f3fc8925495859eb626d86b9edcdb2dc328dd37a5e85"
+  },
+  {
+    "file": "core/weighted_core.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/weighted_core.py",
+    "sha256": "325a85a7a1d9fbfa9db00f7a318479b81a4e6f7b7b4e9fd829fbea873a176935"
+  },
+  {
+    "file": "core/rollout.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/rollout.py",
+    "sha256": "fb249b90911d548bb6a05e447a16559992f2ae29c2451e5358ba541edfad5b1a"
+  },
+  {
+    "file": "core/fast_rollout.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/fast_rollout.py",
+    "sha256": "442c10621ddfdec836ee465745c027f8e49650fa936ff16c238805973f87680a"
+  },
+  {
+    "file": "core/causal_inputs.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/causal_inputs.py",
+    "sha256": "273d96bbe9c1e7f0da683b3d684d3b5adf8ca60eb6b9b9075de3e128efdb445f"
+  },
+  {
+    "file": "core/calibration.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/calibration.py",
+    "sha256": "0dffd95a2890de2a8685000a9fabf5510cb9503a95c21f31d3e112dc98caad1c"
+  },
+  {
+    "file": "evaluation/verify_validation_and_report.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/verify_validation_and_report.py",
+    "sha256": "cbb529985640bfa7d052e02c31fdcd6009430b49edd8aca762235aa2b5dd3501"
+  },
+  {
+    "file": "evaluation/evaluate_ecr_ablations.py",
+    "source": "Code/revision_step4_paper_full4890_20261014_run4/evaluate_ecr_ablations.py",
+    "sha256": "43b2c7da3773aa8359cca65180f353b680d572001c620e65126a71924ac2ca9e"
+  },
+  {
+    "file": "evaluation/feature_analysis_statistics.py",
+    "source": "Code/feature_analysis_statistics.py",
+    "sha256": "b3232efbb005e7f47e0efe1d5256430ef3d9a3baea01553a6d02cc32d17dc5bc"
+  }
+]

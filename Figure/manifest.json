@@ -1,0 +1,86 @@
+[
+  {
+    "figure": 1,
+    "file": "figure_01_field_collection.png",
+    "docx_media": "word/media/image41.png",
+    "sha256": "517350da6bcc96eded1e38589887eee5310856537853dcad600bdcc60feb51e2",
+    "updated": false
+  },
+  {
+    "figure": 2,
+    "file": "figure_02_sensing_workflow.png",
+    "docx_media": "word/media/image42.png",
+    "sha256": "697a1a361ade6435feb58cc96d03e032e0e449024895a3d3333f4c592dec8387",
+    "updated": false
+  },
+  {
+    "figure": 3,
+    "file": "figure_03_event_extraction.png",
+    "docx_media": "word/media/image43.png",
+    "sha256": "90ff76b3942715353a42b791af7d5c86fe20e5788821c94f6c834d5d5c970ae9",
+    "updated": false
+  },
+  {
+    "figure": 4,
+    "file": "figure_04_methodological_route.png",
+    "docx_media": "word/media/image44.png",
+    "sha256": "eb73510fc0424437d9acefd4c05da30bf304bf340a574c80c7ce826ab12ee03d",
+    "updated": false
+  },
+  {
+    "figure": 5,
+    "file": "figure_05_bottleneck_scenarios.png",
+    "docx_media": "word/media/image45.png",
+    "sha256": "81b7a783c1e186f830e54cfacdf418f6dd90b3c4feb74e79f7844c6497558401",
+    "updated": false
+  },
+  {
+    "figure": 6,
+    "file": "figure_06_hgbecr_model.png",
+    "docx_media": "word/media/image46.png",
+    "sha256": "ffed6db1152e49353581f2260a32651cfa5541b6b1001b11c9e25b18dd4401c1",
+    "updated": false
+  },
+  {
+    "figure": 7,
+    "file": "figure_07_longitudinal_indicators.png",
+    "docx_media": "word/media/image47.png",
+    "sha256": "3a61adc696a1cb72f45207e3b83bcc3018f14fa00392b6cd4e6308e74d20ffbd",
+    "updated": false
+  },
+  {
+    "figure": 8,
+    "file": "figure_08_lateral_indicators.png",
+    "docx_media": "word/media/image48.png",
+    "sha256": "04124213697edd7d5adf6bcea28ba7102b83c5d7302e5dfb1eb8624ba422f8b9",
+    "updated": false
+  },
+  {
+    "figure": 9,
+    "file": "figure_09_trajectory_examples.png",
+    "docx_media": "word/media/image49.png",
+    "sha256": "8939c707d8145efeff9eb1fec5d70fb8819f41679709052adf81f514292b775c",
+    "updated": false
+  },
+  {
+    "figure": 10,
+    "file": "figure_10_model_performance.png",
+    "docx_media": "word/media/image50.png",
+    "sha256": "06278568ba8142b2da2c105d4ca3a98753c1eb2640e24d2d869db1168e37fc88",
+    "updated": false
+  },
+  {
+    "figure": 11,
+    "file": "figure_11_horizon_errors.png",
+    "docx_media": "word/media/image51.png",
+    "sha256": "29b3a19a3766900aa5be023458d4351d458dfbe03082cb5991752586665459eb",
+    "updated": false
+  },
+  {
+    "figure": 12,
+    "file": "figure_12_endpoint_errors.png",
+    "docx_media": "word/media/image52.png",
+    "sha256": "135c25862d640cd7d53e7f1a5cf0b287e66454b0a584cf7dd442471b6cb9b762",
+    "updated": false
+  }
+]

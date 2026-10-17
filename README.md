@@ -1,73 +1,60 @@
 # Modeling-Driver-Evasive-Behavior-in-Response-to-Mobile-Maintenance-Vehicles-on-Expressways
 
-This repository contains the key data, code, model outputs, and manuscript figures for driver evasive behavior analysis and multi-model trajectory prediction in mobile maintenance work-zone scenarios.
+This repository contains the trajectory data, selected source code, summary results, and manuscript figures for the analysis of driver evasive behavior and HGB-ECR trajectory prediction in mobile maintenance work-zone scenarios on expressways.
+
+The results correspond to the current manuscript: five date-held-out folds over 4,890 trajectories, comparing HGB-ECR with five baselines (CNN, GBR, IDM, Kalman-CV, Helly).
 
 ## Repository Structure
 
 ```text
 .
-├── Data/
-│   ├── data_0403.xlsx
-│   ├── data_0407.xlsx
-│   ├── data_0409.xlsx
-│   ├── data_0410.xlsx
-│   └── data_0416.xlsx
+├── Data/      Five trajectory workbooks split into 24 MiB parts, plus manifest.json and reassemble.py
 ├── Code/
-│   ├── prediction_main.py
-│   ├── prediction_shared_functions.py
-│   ├── feature_analysis_statistics.py
-│   └── feature_indicator_schematic.py
-├── Result/
-│   ├── final_eight_model_results.xlsx
-│   └── final_eight_model_results.json
-└── Figure/
-    └── JTEA_submission_figures/
-        ├── figure_01_field_collection.png
-        ├── figure_02_sensing_workflow.png
-        ├── figure_03_event_extraction.png
-	        ├── ...
-	        └── figure_12_endpoint_errors.png
-
+│   ├── model/        HGB-ECR inference, head training, parameter selection, numerical correction
+│   ├── core/         Shared data loading, features, models and rollout
+│   └── evaluation/   Feature statistics, result verification, component ablation
+├── Result/    Summary CSV files used in the manuscript tables
+└── Figure/    Figures 1-12 extracted from the manuscript
 ```
 
-## Data Availability
+Each directory has its own `README.md` and a `manifest.json` listing file sources and SHA-256 values.
 
-The `Data/` directory contains the analysis-ready Excel datasets used by the
-code and reported results in this repository:
+## Data
 
-| File | Availability | Notes |
+| Workbook | Size | Parts |
 | --- | --- | --- |
-| `data_0403.xlsx` | Included | Analysis-ready dataset. |
-| `data_0407.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
-| `data_0409.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
-| `data_0410.xlsx` | Included in split archive | Restore `Data/processed_data.zip` and its companion parts. |
-| `data_0416.xlsx` | Included | Analysis-ready dataset. |
+| `data_0403.xlsx` | 118.5 MiB | 5 |
+| `data_0407.xlsx` | 624.4 MiB | 27 |
+| `data_0409.xlsx` | 531.0 MiB | 23 |
+| `data_0410.xlsx` | 520.1 MiB | 22 |
+| `data_0416.xlsx` | 83.9 MiB | 4 |
 
-The raw source data are **not** deposited in this public repository. In
-particular, files named `raw_data_0403.xlsx`, `raw_data_0407.xlsx`,
-`raw_data_0409.xlsx`, `raw_data_0410.xlsx`, and `raw_data_0416.xlsx` are not
-available here and should not be expected in a clone of the project.
-
-The public datasets are the repository inputs for the supplied analysis and
-prediction code. They support reproduction of the processing, model fitting,
-and result-generation steps implemented in `Code/`, but they do not by
-themselves reproduce the upstream collection, cleaning, or event-extraction
-steps that produced the raw source records.
-
-Requests for access to raw source data should be directed to the repository
-maintainers. Any sharing decision must be made by the data owners and is
-subject to the applicable consent, privacy, and data-use requirements.
-
-### Cloning the repository
-
-### Complete data archive
-
-All five processed datasets are also distributed as a split ZIP archive in
-`Data/`. Download every `processed_data.z01` through `processed_data.z13` file
-and `processed_data.zip` into the same directory. Standard ZIP utilities can
-then extract the final `processed_data.zip` file and will automatically read
-the preceding parts:
+The `.partNNN` files are byte slices of the original workbooks, not individual spreadsheets. To restore them, download the whole `Data/` directory and run:
 
 ```bash
-unzip processed_data.zip
+cd Data
+python reassemble.py
 ```
+
+The script verifies every part and every reconstructed workbook against the SHA-256 values in `manifest.json` and writes the files to `Data/restored_workbooks/`.
+
+Raw source records (`raw_data_*.xlsx`) are not included. Requests for raw data should be directed to the repository maintainers; any sharing is subject to the data owners' consent, privacy and data-use requirements.
+
+## Code
+
+`Code/` is a source snapshot of the files behind the current results, not a standalone executable package. Trained model weights, caches and the private path registry are not included, and the original imports and paths are kept so the SHA-256 provenance in `Code/manifest.json` can be checked.
+
+## Results
+
+Overall prediction errors across the five held-out dates (`Result/overall_prediction_errors.csv`):
+
+| Model | ADE (m) | FDE (m) | RMSE (m) | Successful / attempted |
+| --- | --- | --- | --- | --- |
+| HGB-ECR | 1.214 | 2.720 | 3.129 | 4890 / 4890 |
+| CNN | 1.474 | 3.502 | 4.084 | 4890 / 4890 |
+| GBR | 1.523 | 3.567 | 4.385 | 4890 / 4890 |
+| Kalman-CV | 2.455 | 5.007 | 4.857 | 4890 / 4890 |
+| IDM | 3.040 | 4.099 | 6.622 | 4888 / 4890 |
+| Helly | 7.060 | 14.704 | 10.230 | 4600 / 4890 |
+
+Other files in `Result/` give per-date errors, horizon errors, endpoint axis errors, confidence intervals, component ablation, endpoint feature SHAP values and scoring coverage. The manuscript reports rounded values.
