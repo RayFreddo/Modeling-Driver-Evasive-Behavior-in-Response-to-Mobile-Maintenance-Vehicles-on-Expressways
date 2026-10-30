@@ -6,8 +6,8 @@ import pandas as pd
 import joblib
 from contracts import ROOT,DAYS,sha,write_json,write_csv,dump_new,npz_new
 from full_dataset import read_day,COUNTS
-from optimized_features import from_history,BOX_COLUMNS
-OUT=ROOT/'outputs/step4_optimized_full4890_dataset_20261014_run2'
+from optimized_features import from_history,BOX_COLUMNS,FEATURE_DIM,FEATURE_SCHEMA,RISK_FEATURE_NAMES
+OUT=ROOT/'outputs/optimized_motion_risk_inputs_20261030'
 
 def json_frames(path):
     decoder=json.JSONDecoder();buf='';pos=0;eof=False;opened=False
@@ -33,6 +33,8 @@ def json_frames(path):
 
 def read_optimized(day):
     folder=OUT/day;proof=json.loads((folder/'identity.json').read_text(encoding='utf-8'))
+    if proof.get('feature_schema')!=FEATURE_SCHEMA:
+        raise ValueError('Risk-feature cache must be rebuilt; legacy 310-column cache is not compatible')
     for rel,d in proof['input_sha256'].items():
         if sha(ROOT/rel)!=d:raise ValueError('Optimized data input changed: '+rel)
     for name,d in proof['artifact_sha256'].items():
@@ -40,6 +42,7 @@ def read_optimized(day):
     ss=joblib.load(folder/'dataset.joblib')
     with np.load(folder/'arrays.npz',allow_pickle=False) as f:z={k:f[k].copy() for k in f.files}
     assert len(ss)==len(z['keys'])==COUNTS[day]
+    assert z['x'].shape==(COUNTS[day],FEATURE_DIM)
     return ss,z,proof
 
 def main():
@@ -67,15 +70,19 @@ def main():
                     v=needed.get((int(record.object_id),int(record.frame)))
                     if v is not None:a[j]=v
             for j,col in enumerate(BOX_COLUMNS):h[col]=a[:,j]
-            h['confidence']=a[:,5];s.history=h;t0=float(h.timestamp_s.iloc[-1]);x=from_history(h,t0)
+            h['confidence']=a[:,5]
+            h.attrs['neighbor_snapshot']=s.snapshot
+            s.history=h;t0=float(h.timestamp_s.iloc[-1]);x=from_history(h,t0)
             arrays.append(x);targets.append(s.truth_delta+h[['x_m','y_m']].iloc[-1].to_numpy())
             keys.append(s.key);counts.append(int(np.isfinite(a[:,:4]).all(1).sum()))
             s.manifest['observed_box_rows_in_history']=counts[-1]
             s.manifest['box_missing_rows_in_history']=len(h)-counts[-1]
-        x=np.array(arrays);y=np.array(targets);assert x.shape==(COUNTS[day],310) and np.isfinite(y).all()
+        x=np.array(arrays);y=np.array(targets);assert x.shape==(COUNTS[day],FEATURE_DIM) and np.isfinite(y).all()
         dump_new(folder/'dataset.joblib',ss);npz_new(folder/'arrays.npz',x=x,y=y,keys=np.array(keys),days=np.repeat(day,len(ss)))
         write_csv(folder/'manifest.csv',pd.DataFrame([s.manifest for s in ss]))
         info={'day':day,'N':len(ss),'all_corrected_objects_included':True,'coordinates_and_targets':'five corrected Excel only',
+          'feature_schema':FEATURE_SCHEMA,'feature_dimensions':FEATURE_DIM,
+          'appended_risk_inputs':list(RISK_FEATURE_NAMES),
           'raw_fields_used':['bbox','class','confidence','object_id','frame'],'raw_coordinate_fields_used':False,
           'missing_boxes':'NaN, fitted imputation within the training scope only; no invented detector boxes',
           'objects_with_any_observed_boxes':int(np.sum(np.array(counts)>0)),

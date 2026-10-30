@@ -17,7 +17,8 @@ def training_scope(data,days):
         samples,z,proof=data[day];n=len(samples);views=[]
         rng=np.random.default_rng(20261014+int(day))
         for i,s in enumerate(samples):
-            h=s.history;t0=float(h.timestamp_s.iloc[-1]);variants=[h]
+            h=s.history.copy();h.attrs['neighbor_snapshot']=s.snapshot
+            t0=float(h.timestamp_s.iloc[-1]);variants=[h]
             # Exact source noise recipe: labels never perturbed; no smoothing.
             for _ in range(2):
                 g=h.copy()

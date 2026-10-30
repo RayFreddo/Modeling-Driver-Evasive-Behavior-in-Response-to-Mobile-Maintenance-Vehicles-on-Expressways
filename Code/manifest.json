@@ -2,7 +2,9 @@
   {
     "file": "model/predict.py",
     "source": "Code/HGB_ECR_现行_20261014/predict.py",
-    "sha256": "328d80618da05fb1405ec2746a21d076ea033148af7e0e0016cf57ab57670e82"
+    "original_sha256": "328d80618da05fb1405ec2746a21d076ea033148af7e0e0016cf57ab57670e82",
+    "sha256": "6898adbd71c176288b1ad34c9f825e1d446b7dc6ee03a0a2cb0a22bd966f3d33",
+    "local_update": "2026-10-30 risk-input schema; refit required; not executed"
   },
   {
     "file": "model/train_head.py",
@@ -42,7 +44,9 @@
   {
     "file": "core/prepare_optimized.py",
     "source": "Code/revision_step4_paper_full4890_20261014_run4/prepare_optimized.py",
-    "sha256": "f8afb68d6a184939d2164470070beeec9e7386038236c1a33bc50b79f66e57d7"
+    "original_sha256": "f8afb68d6a184939d2164470070beeec9e7386038236c1a33bc50b79f66e57d7",
+    "sha256": "b809f9b25a18eaf3da1a8973bc2a977578d88679621fb3aa95e39f5bdd63dd20",
+    "local_update": "2026-10-30 risk-input schema; refit required; not executed"
   },
   {
     "file": "core/optimized_features_base.py",
@@ -52,7 +56,9 @@
   {
     "file": "core/optimized_features.py",
     "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_features.py",
-    "sha256": "900cf599700d216044157ee52e140e825e401ac82902f56e9a39454807dec933"
+    "original_sha256": "900cf599700d216044157ee52e140e825e401ac82902f56e9a39454807dec933",
+    "sha256": "8b47f86a5d30edf3788f1fbe72a7e68860c45f1de160875442d7ac30443ffa70",
+    "local_update": "2026-10-30 risk-input schema; refit required; not executed"
   },
   {
     "file": "core/optimized_models.py",
@@ -62,7 +68,9 @@
   {
     "file": "core/optimized_fit.py",
     "source": "Code/revision_step4_paper_full4890_20261014_run4/optimized_fit.py",
-    "sha256": "66a891e0fc7944b46ccb42bd56eb775fe5731bb4999c5bde4c1d187482681efd"
+    "original_sha256": "66a891e0fc7944b46ccb42bd56eb775fe5731bb4999c5bde4c1d187482681efd",
+    "sha256": "e746e506d1fd7e43bf1d79b7cc9d87875e902871a06dfbd40f2fd8f73e9b0c65",
+    "local_update": "2026-10-30 risk-input schema; refit required; not executed"
   },
   {
     "file": "core/optimized_physical.py",

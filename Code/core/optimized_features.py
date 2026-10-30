@@ -1,7 +1,58 @@
-"""Original 310-feature optimized schema; unknown box observations remain missing."""
+"""Past-only motion/image features plus TTC, DRAC and adjacent-lane gaps.
+
+The appended input schema requires refitting; legacy 310-column weights and
+cached arrays cannot be used as if they had learned these additional inputs.
+"""
 import numpy as np
-from optimized_features_base import features,transform,anchor_basis,HORIZONS
+from optimized_features_base import features,transform as _motion_transform,anchor_basis,HORIZONS
 BOX_COLUMNS=['bbox_left','bbox_top','bbox_right','bbox_bottom','detector_class']
+RISK_FEATURE_NAMES=('ttc_s','drac_mps2',
+    'left_front_gap_m','left_rear_gap_m','left_available_gap_m',
+    'right_front_gap_m','right_rear_gap_m','right_available_gap_m')
+FEATURE_DIM=310+len(RISK_FEATURE_NAMES)
+FEATURE_SCHEMA='motion310-risk8-v1'
+
+def risk_features(past,t0):
+    """Use only the supplied prefix and its time-matched neighbor snapshot.
+
+    y is positive rearward, so closing speed is minus relative y velocity.
+    Gaps are longitudinal reference-point distances, not bumper clearances.
+    Both adjacent lanes are retained; no future maneuver-side label is used.
+    """
+    row=past.iloc[-1];spacing=float(row.y_m)
+    if 'rel_velocity_mps' in past:
+        closing=-float(row.rel_velocity_mps)
+    else:
+        recent=past.loc[past.timestamp_s>=t0-.5-1e-9]
+        closing=-float(np.polyfit(recent.timestamp_s.to_numpy(float)-t0,
+                                 recent.y_m.to_numpy(float),1)[0])
+    valid=np.isfinite(spacing) and np.isfinite(closing) and spacing>0 and closing>.5
+    values=[spacing/closing if valid else np.nan,
+            closing**2/(2*spacing) if valid else np.nan]
+    snapshot=past.attrs.get('neighbor_snapshot')
+    for side in ('left','right'):
+        gaps=[]
+        for role in ('front','rear'):
+            column=f'{side}_{role}_gap_m'
+            if snapshot is not None:
+                from upstream3.neighbors import observe_slot
+                ego=float(row.ego_projection_mps)
+                observation=observe_slot(snapshot,f'{side}_{role}',float(row.x_m),
+                    spacing,ego,t0,.1,row.get('object_id'))
+                gap=abs(observation.dy_m) if observation.observed else np.nan
+            else:
+                gap=float(row.get(column,np.nan))
+            gaps.append(gap if np.isfinite(gap) and gap>0 else np.nan)
+        # Missing detections stay missing; they are not zero or an infinite gap.
+        values.extend([*gaps,sum(gaps) if np.isfinite(gaps).all() else np.nan])
+    return np.asarray(values,float)
+
+def transform(x):
+    """Pass the appended risk inputs into the same fitted model transformer."""
+    x=np.asarray(x,float)
+    if x.ndim!=2 or x.shape[1]!=FEATURE_DIM:
+        raise ValueError('Expected motion310-risk8-v1 inputs; rebuild features and refit the model')
+    return np.column_stack([_motion_transform(x[:,:310]),x[:,310:]])
 
 def box_features(t,boxes,classes,t0):
     t=np.asarray(t,float);keep=(t<=t0+1e-10)&(t>=t0-3.10000001)
@@ -27,6 +78,6 @@ def from_history(h,t0):
     past=h.loc[h.timestamp_s<=t0+1e-10].copy()
     a=features(past.timestamp_s.to_numpy(),past[['x_m','y_m']].to_numpy(),past.ego_projection_mps.to_numpy(),past.confidence.to_numpy(),t0)
     b=box_features(past.timestamp_s.to_numpy(),past[BOX_COLUMNS[:4]].to_numpy(),past.detector_class.to_numpy(),t0)
-    x=np.r_[a,b]
-    if x.shape!=(310,) or np.isinf(x).any():raise ValueError('Invalid optimized features')
+    x=np.r_[a,b,risk_features(past,t0)]
+    if x.shape!=(FEATURE_DIM,) or np.isinf(x).any():raise ValueError('Invalid optimized features')
     return x

@@ -1,9 +1,12 @@
-"""现行 HGB-ECR：历史输入推理入口。仅同步名称，不改变预测公式或权重。"""
+"""HGB-ECR history inference; appended risk inputs require refitted weights."""
 import sys
 from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'Code/revision_step4_matched_teacher_20261014_run13'))
+# Resolve the published feature schema before historical modules import it.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'core'))
+from optimized_features import from_history,transform,FEATURE_SCHEMA
 import audit_release as a
 from _locations import CURRENT, relocate_loaded_modules
 relocate_loaded_modules()
@@ -39,7 +42,13 @@ def main(held,out,sample_key=None):
     for s in samples:
         assert set(vars(s))=={'key','history'}
         assert s.history.timestamp_s.max()<=float(s.key.split(':t0')[-1])+1e-9
+    # Use actual history inputs, not the legacy motion-only cached vectors.
+    x=np.asarray([from_history(s.history,float(s.key.split(':t0')[-1])) for s in samples])
     parent=joblib.load(row['base_path']).base;core=joblib.load(row['core_path'])
+    head=getattr(parent,'base',parent)
+    expected=getattr(getattr(head,'imputer',None),'n_features_in_',None)
+    if expected!=transform(x).shape[1]:
+        raise ValueError('TTC/DRAC/gap inputs require refitting the base and correction models; legacy frozen weights are incompatible')
     assert set(parent.training_days)==set(row['training_days']) and held not in parent.training_days
     policy=row['policy']
     raw=a.r.h.l.damp(a.r.h.g.generate(parent,samples,x,policy['fallback_method'],0.),policy['lateral_tau_s'],samples)
@@ -51,7 +60,7 @@ def main(held,out,sample_key=None):
         t=generated['offsets_s'];p=generated['positions'][i]
         parts.append(pd.DataFrame(dict(sample_key=s.key,offset_s=t,timestamp_s=generated['initial_origin_s'][i]+t,pred_x_m=p[:,0],pred_y_m=p[:,1])))
     write_csv(target/'predictions_120s.csv',pd.concat(parts,ignore_index=True))
-    write_json(target/'identity.json',dict(model='HGB-ECR', model_status='现行主模型', implementation_id='matched_teacher_full_horizon_20261014', held=held,N=len(samples),training_days=parent.training_days,
+    write_json(target/'identity.json',dict(model='HGB-ECR', model_status='risk-input refit', implementation_id=FEATURE_SCHEMA, held=held,N=len(samples),training_days=parent.training_days,
         no_future_label_files_loaded=True,no_scoring_references_loaded=True,
         registry_sha256=sha(a.DEST/'冻结模型注册表.json'),input_lock_sha256=sha(a.DEST/'输入与实现锁.json'),
         artifacts={p.name:sha(p) for p in target.iterdir() if p.is_file()}))
