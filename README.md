@@ -38,6 +38,8 @@ python reassemble.py
 
 The script verifies every part and every reconstructed workbook against the SHA-256 values in `manifest.json` and writes the files to `Data/restored_workbooks/`.
 
+The five workbooks comprise 81 parts and preserve all three worksheets (`Sheet1`, `Main_Completion_Stats`, and `Surrounding_Vehicles`). Their checksums were verified on 2026-10-31.
+
 Raw source records (`raw_data_*.xlsx`) are not included. Requests for raw data should be directed to the repository maintainers; any sharing is subject to the data owners' consent, privacy and data-use requirements.
 
 ## Code
@@ -46,7 +48,7 @@ Raw source records (`raw_data_*.xlsx`) are not included. Requests for raw data s
 
 ## Results
 
-Overall prediction errors across the five held-out dates (`Result/overall_prediction_errors.csv`):
+Overall prediction errors across the five held-out dates (manuscript Table 8b; `Result/overall_prediction_errors.csv`):
 
 | Model | ADE (m) | FDE (m) | RMSE (m) | Successful / attempted |
 | --- | --- | --- | --- | --- |
@@ -58,3 +60,9 @@ Overall prediction errors across the five held-out dates (`Result/overall_predic
 | Helly | 7.060 | 14.704 | 10.230 | 4600 / 4890 |
 
 Other files in `Result/` give per-date errors, horizon errors, endpoint axis errors, confidence intervals, component ablation, endpoint feature SHAP values and scoring coverage. The manuscript reports rounded values.
+
+The per-date errors, component ablations, endpoint axis errors, and grouped SHAP results correspond to manuscript Tables 8a, 9, 10, and 11, respectively.
+
+## Figures
+
+`Figure/` contains Figures 1-12. All 12 PNG files were verified byte-for-byte against the current revised manuscript (`Figures_Revised.docx`) on 2026-10-31. See [Figure/README.md](Figure/README.md) for the figure documentation and [Figure/manifest.json](Figure/manifest.json) for SHA-256 values.
